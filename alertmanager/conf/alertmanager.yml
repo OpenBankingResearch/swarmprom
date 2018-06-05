@@ -103,9 +103,10 @@ inhibit_rules:
 
 receivers:
 - name: 'slack'
-    slack_configs:
-      channel: '#devops'
-      text: 'Instances: {{ range .Alerts }}{{ .Labels.instance }} {{ end }}'
+  slack_configs:
+  - channel: '#devops'
+    username: '@channel'
+    text: 'Instances: {{ range .Alerts }}{{ .Labels.instance }} {{ end }}'
 
 - name: 'team-X-mails'
   email_configs:

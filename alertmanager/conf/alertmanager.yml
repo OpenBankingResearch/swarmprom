@@ -9,7 +9,7 @@ global:
   # Alternative host for Hipchat.
   hipchat_api_url: 'https://hipchat.foobar.org/'
   slack_api_url: 'https://hooks.slack.com/services/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'
-  jenkins_webhook_url: 'http://40.91.197.164:8180/generic-webhook-trigger/invoke?token=scalingservice'
+
 
 # The directory from which notification templates are read.
 templates: 
@@ -112,7 +112,7 @@ receivers:
 - name: 'jenkins'
   webhook_configs:
   - send_resolved: true
-    url: jenkins_webhook_url
+    url: 'http://40.91.197.164:8180/generic-webhook-trigger/invoke?token=scalingservice'
 
 - name: 'team-X-mails'
   email_configs:

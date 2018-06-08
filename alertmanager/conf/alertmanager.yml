@@ -48,7 +48,7 @@ route:
   # This routes performs a regular expression match on alert labels to
   # catch alerts that are related to a list of services.
   - match_re:
-      service: ^(creditcard|mortgage|user)$
+      service: ^(creditcard|mortgage|user|audit)$
     receiver: jenkins
     # The service has a sub-route for critical alerts, any alerts
     # that do not match, i.e. severity != critical, fall-back to the

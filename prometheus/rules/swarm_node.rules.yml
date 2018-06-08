@@ -37,7 +37,7 @@ groups:
       GROUP_LEFT(node_name) node_meta < 0
     for: 1h
     labels:
-      severity: critical
+      severity: error
     annotations:
       description: Swarm node {{ $labels.node_name }} disk is going to fill up in
         6h.

@@ -33,10 +33,10 @@ route:
   repeat_interval: 30m 
 
   # A default receiver
-  receiver: jenkins
+  receiver: slack
   
   routes:
-  - receiver: slack
+  - receiver: jenkins
     match:
       severity: critical
       

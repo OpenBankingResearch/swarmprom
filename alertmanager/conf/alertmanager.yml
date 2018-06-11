@@ -34,14 +34,11 @@ route:
 
   # A default receiver
   receiver: slack
+  
   routes:
-  - match_re:
-      service: ^(creditcard|mortgage|user|audit|gateway)$
-    receiver: jenkins
-    routes:
-    - match:
-        severity: critical
-      receiver: jenkins
+  - receiver: jenkins
+    match:
+      severity: scaleservice
       
 receivers:
 - name: 'slack'

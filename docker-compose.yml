@@ -97,6 +97,7 @@ services:
     command:
       - '--config.file=/etc/alertmanager/alertmanager.yml'
       - '--storage.path=/alertmanager'
+      - '--log.level=debug'
     volumes:
       - alertmanager:/alertmanager
     deploy:

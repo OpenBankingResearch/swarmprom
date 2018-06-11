@@ -38,7 +38,7 @@ route:
   routes:
   - receiver: jenkins
     match:
-      severity: scaleservice
+      severity: critical
       
 receivers:
 - name: 'slack'

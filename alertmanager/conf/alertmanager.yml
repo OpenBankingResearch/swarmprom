@@ -33,10 +33,10 @@ route:
   repeat_interval: 30m 
 
   # A default receiver
-  receiver: slack
+  receiver: jenkins
   
   routes:
-  - receiver: jenkins
+  - receiver: slack
     match:
       severity: critical
       
@@ -50,5 +50,5 @@ receivers:
 - name: 'jenkins'
   webhook_configs:
   - send_resolved: true
-    url: http://40.91.197.164:8180/generic-webhook-trigger/invoke?token=scalingservice
+    url: http://40.91.197.164:8180/generic-webhook-trigger/invoke?token=scalingservice&servicename={{ $labels.container_label_com_docker_swarm_task_name}}
 
